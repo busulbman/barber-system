@@ -1,0 +1,84 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-2: var(--navy-2);
+  --color-navy-3: var(--navy-3);
+  --color-card-dark: var(--card-dark);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-bone: var(--bone);
+  --color-muted-soft: var(--muted-soft);
+  --color-border-soft: var(--border-soft);
+  --font-display: "Bebas Neue", sans-serif;
+  --font-sub: "Oswald", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+:root {
+  --navy: #0a0f1e;
+  --navy-2: #111827;
+  --navy-3: #1a2236;
+  --card-dark: #131c2e;
+  --gold: #f5b800;
+  --gold-light: #ffd04d;
+  --gold-dark: #c99200;
+  --bone: #f4f0e8;
+  --muted-soft: #8a8d99;
+  --border-soft: #1e2a3e;
+  --background: #0a0f1e;
+  --foreground: #f4f0e8;
+  --border: #1e2a3e;
+}
+
+@layer base {
+  * {
+    border-color: var(--border-soft);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--navy);
+    color: var(--bone);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.01em;
+    line-height: 0.95;
+  }
+}
+
+.diag-stripes {
+  background-color: #0e1626;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(245, 184, 0, 0.06) 0px,
+    rgba(245, 184, 0, 0.06) 1px,
+    transparent 1px,
+    transparent 12px
+  );
+}
+
+.gold-grid {
+  background-image:
+    linear-gradient(rgba(245, 184, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 184, 0, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
